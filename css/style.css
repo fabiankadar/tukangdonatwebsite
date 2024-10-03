@@ -319,43 +319,55 @@ span {
   margin-top: 6rem;
 } */
 
-/* Review Section */
-.review-content {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-  gap: 2rem;
-  align-items: center;
-  margin-top: 4rem;
+/* Testimonials Section */
+.testimonials {
+  padding: 100px 0;
 }
 
-.box {
-  padding: 35px;
-  background: var(--other-color);
-  border-radius: 3rem;
+.testimonials-container {
+  max-width: 1170px;
+  margin: auto;
+  padding: 0 15px;
 }
 
-.box p {
+.testimonials-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.testimonials-header h2 {
+  font-size: var(--h2-font);
+  text-transform: capitalize;
+  color: var(--text-color);
+  line-height: 1.2;
+}
+
+.testimonials-item {
+  background-color: var(--other-color);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.testimonials-item p {
   color: var(--second-color);
-  font-size: var(--p-font);
-  line-height: 30px;
-  margin-bottom: 1.5rem;
 }
 
-.in-box {
-  display: flex;
-  align-items: center;
-  gap: 30px;
+.testimonials-item .rating {
+  margin-top: 15px;
+  font-size: 14px;
+  color: var(--bg-color);
 }
 
-.bxx-text h4 {
-  margin: 5px 0;
-  font-size: 18px;
+.testimonials .swiper-pagination {
+  position: relative;
+  margin-top: 40px;
+  bottom: auto;
 }
 
-.ratings i {
-  color: var(--main-color);
-  font-size: 18px;
-  margin-right: 5px;
+.testimonials .swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  background-color: var(--main-color);
 }
 
 /* Contact Section */

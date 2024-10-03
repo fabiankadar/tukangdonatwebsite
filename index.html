@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tukang Donat</title>
     <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- Box Icons -->
     <link
       rel="stylesheet"
@@ -185,71 +193,74 @@
       </div> -->
     </section>
 
-    <!-- Reviews -->
-    <section class="review" id="review">
-      <div class="middle-text">
-        <h4>Pelanggan Kami</h4>
-        <h2>Testi dari pelanggan kami</h2>
-      </div>
+    <!-- Testimonials -->
+    <section class="testimonials">
+      <div class="testimonials-container">
+        <div class="testimonials-header">
+          <h2>Testi dari pelanggan kami</h2>
+        </div>
 
-      <div class="review-content">
-        <div class="box">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur
-            autem eos odit voluptas commodi voluptates similique ad modi sequi
-            rem.
-          </p>
-          <div class="in-box">
-            <div class="bxx-text">
-              <h4>John Karahan</h4>
-              <div class="ratings">
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
+        <div class="testimonials-content">
+          <div class="swiper testimonials-slider js-testimonials-slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide testimonials-item">
+                <p>Testi 1</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide testimonials-item">
+                <p>Testi 2</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide testimonials-item">
+                <p>Testi 3</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide testimonials-item">
+                <p>Testi 4</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </div>
+
+              <div class="swiper-slide testimonials-item">
+                <p>Testi 5</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="box">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur
-            autem eos odit voluptas commodi voluptates similique ad modi sequi
-            rem.
-          </p>
-          <div class="in-box">
-            <div class="bxx-text">
-              <h4>John Karahan</h4>
-              <div class="ratings">
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="box">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur
-            autem eos odit voluptas commodi voluptates similique ad modi sequi
-            rem.
-          </p>
-          <div class="in-box">
-            <div class="bxx-text">
-              <h4>John Karahan</h4>
-              <div class="ratings">
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
-                <a href="#"><i class="bx bxs-star"></i></a>
-              </div>
-            </div>
+          <div class="swiper-pagination js-testimonials-paginaton">
+            <p>Swipe Left for More!</p>
           </div>
         </div>
       </div>
@@ -295,5 +306,23 @@
     </a>
     <!-- Link to JS -->
     <script src="./js/script.js"></script>
+
+    <!-- Link to SwiperJS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.js-testimonials-slider', {
+        grabCursor: true,
+        spaceBetween: 30,
+        paginaton: {
+          el: '.js-testimonials-paginaton',
+          clickable: true,
+        },
+        breakpoints: {
+          767: {
+            slidesPerView: 2,
+          },
+        },
+      });
+    </script>
   </body>
 </html>
